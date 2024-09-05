@@ -308,13 +308,11 @@ try {
   console.log("There was an error");
 }
 
-
-
 var currencyOne = 100;
 var currencyTwo = 0;
 var exchangeRate = 1.2;
 
-function convertCurrency(amount, rate){
+function convertCurrency(amount, rate) {
   return amount * rate;
 }
 
@@ -322,11 +320,8 @@ currencyTwo = convertCurrency(currencyOne, exchangeRate);
 
 console.log(currencyTwo);
 
-
-
-
 function getDistance(mph, h) {
-  return mph * h
+  return mph * h;
 }
 var mph = 60;
 var h = 2;
@@ -334,20 +329,17 @@ var distance = getDistance(mph, h);
 
 console.log(distance);
 
-
 function meal(animal) {
   animal.food = animal.food + 10;
 }
 
 var dog = {
-  food: 10
+  food: 10,
 };
 meal(dog);
 meal(dog);
 
 console.log(dog.food);
-
-
 
 function two() {
   return 2;
@@ -362,3 +354,179 @@ function calculate(initialValue, incrementValue) {
 }
 
 console.log(calculate(two, one));
+
+var purchase = {
+  shoes: 100,
+  stateTax: 1.2,
+  totalPrice: function () {
+    var calculation = purchase.shoes * purchase.stateTax;
+    console.log(`Total Price: ${calculation}`);
+  },
+};
+
+purchase.totalPrice();
+
+class Cake {
+  constructor(lyr) {
+    this.layers = lyr + 1;
+  }
+}
+
+var result = new Cake(1);
+console.log(result.layers);
+
+class Animal {
+  constructor(lg) {
+    this.legs = lg;
+  }
+}
+
+class Dog extends Animal {
+  constructor() {
+    super(4);
+  }
+}
+
+var result = new Dog();
+console.log(result.legs);
+
+class Animl {}
+
+class Cat extends Animl {
+  constructor() {
+    super();
+    this.noise = "meow";
+  }
+}
+
+var result = new Animl();
+console.log(result.noise);
+
+class Person {
+  sayHello() {
+    console.log("Hello");
+  }
+}
+
+class Friend extends Person {
+  sayHello() {
+    console.log("Hey");
+  }
+}
+
+var result = new Friend();
+result.sayHello();
+
+const meals = ["soup", "steak", "ice cream"];
+let [starter] = meals;
+console.log(starter);
+
+
+
+let set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+set.add(2);
+set.add(1);
+
+console.log(set);
+
+
+
+let obj = {
+  key: 1,
+  value: 4
+};
+
+let output = { ...obj };
+output.value -= obj.key;
+
+console.log(output.value);
+
+
+
+function cont(...basket) {
+  console.log(basket.length)
+}
+
+cont(10, 9, 8, 7, 6);
+
+
+function scopeTest() {
+  var y = 44;
+
+  console.log(x);
+}
+
+var x = 33;
+scopeTest();
+
+
+
+class Cakes {
+  constructor(lyr) {
+      this.layers = lyr;
+  }
+
+  getLayers() {
+      return this.layers;
+  }
+}
+
+class WeddingCake extends Cakes{
+  constructor() {
+      super(2);
+  }
+
+  getLayers() {
+      return super.getLayers() * 5;
+  }
+}
+
+var result = new WeddingCake();
+console.log(result.getLayers());
+
+
+
+class animal {
+
+}
+
+class Dogs extends animal {
+    constructor() {
+        super();
+        this.noise = "bark";
+    }
+
+    makeNoise() {
+      return this.noise;
+    }
+}
+
+class Wolf extends Dogs {
+    constructor() {
+        super();
+        this.noise = "growl";
+    }
+}
+
+var result = new Wolf();
+console.log(result.makeNoise());
+
+
+
+function coun(...food) {
+  console.log(food.length)
+}
+
+coun("Burgers", "Fries", null);
+
+
+
+// Types of testing
+// 1. E 2 E Testing
+// 2. Integration Testing
+// 3. Unit Testing
+
+
