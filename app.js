@@ -12,6 +12,7 @@ var score = 8;
 
 var result = 50;
 
+
 if (result > 40) {
   console.log("You passed the test");
 } else {
